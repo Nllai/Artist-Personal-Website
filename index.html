@@ -12,55 +12,52 @@
     <div class="outer">
         <!-- ================ section 1 ================= -->
         <div class="top">
-            <div>
-                <!--Navbar-->
-                <nav>
-                    <ul class="nav-head">
-                        <li><a onclick="jump('home')">Home</a></li>
-                        <li><a onclick="jump('content')">Work</a></li>
-                        <li><a onclick="jump('contact')">Contact</a></li>
-                    </ul>
-                </nav>
-
-            </div>
+            <h2>Welcome </h2>
         </div>
 
         <div class="bottom">
+            <p class="radio-group">
+                <label>
+                <input type="radio" name="rotate-cube-side" value="front" checked /> Home
+            </label>
+                <label>
+                <input type="radio" name="rotate-cube-side" value="right" /> Work
+            </label>
+                <label>
+                <input type="radio" name="rotate-cube-side" value="back" /> Contact
+            </label>
+                <label>
+                <input type="radio" name="rotate-cube-side" value="left" /> left
+            </label>
+                <label>
+                <input type="radio" name="rotate-cube-side" value="top" /> top
+            </label>
+                <label>
+                <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
+            </label>
+            </p>
             <div class="scene">
                 <div class="cube">
-                    <div class="cube__face cube__face--front">front</div>
-                    <div class="cube__face cube__face--back">back</div>
-                    <div class="cube__face cube__face--right">right</div>
+                    <div class="cube__face cube__face--front">Home</div>
+                    <div class="cube__face cube__face--back">Contact</div>
+                    <div class="cube__face cube__face--right">Work</div>
                     <div class="cube__face cube__face--left">left</div>
                     <div class="cube__face cube__face--top">top</div>
                     <div class="cube__face cube__face--bottom">bottom</div>
                 </div>
+
+
             </div>
-            <p class="radio-group">
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="front" checked /> front
-                </label>
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="right" /> right
-                </label>
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="back" /> back
-                </label>
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="left" /> left
-                </label>
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="top" /> top
-                </label>
-                <label>
-                    <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
-                </label>
-            </p>
         </div>
 
 
     </div>
-        <script src="js/app.js"></script>
-    </body>
+    <script src="js/app.js"></script>
+</body>
+<footer>
+    <div class="footer">
+        <p>2020 All rights reserved.</p>
+    </div>
+</footer>
 
-    </html>
+</html>
