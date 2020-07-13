@@ -9,44 +9,58 @@
 </head>
 
 <body>
+    <div class="outer">
+        <!-- ================ section 1 ================= -->
+        <div class="top">
+            <div>
+                <!--Navbar-->
+                <nav>
+                    <ul class="nav-head">
+                        <li><a onclick="jump('home')">Home</a></li>
+                        <li><a onclick="jump('content')">Work</a></li>
+                        <li><a onclick="jump('contact')">Contact</a></li>
+                    </ul>
+                </nav>
 
-    <!-- ================ section 1 ================= -->
-    <section class="navbar">
-
-        <!--Navbar-->
-
-        <nav>
-            <ul class="nav-head">
-                <li><a onclick="jump('home')">Home</a></li>
-                <li><a onclick="jump('content')">Work</a></li>
-                <li><a onclick="jump('contact')">Contact</a></li>
-            </ul>
-        </nav>
-
-    </section>
-
-    <!-- ================ section 2 ================= -->
-    <section class="slideshow" id="home">
-
-        <div class="wrapper">
-            <div class="nav prev">&#60;</div>
-            <div class="nav next">&#62;</div>
-
-            <div class="cube">
-                <div class="front">front</div>
-                <div class="back">back</div>
-                <div class="left">left</div>
-                <div class="right">right</div>
             </div>
-
-            <label><input type="checkbox" checked="true" class="autoplay"/>Autoplay</label>
         </div>
 
-    </section>
+        <div class="bottom">
+            <div class="scene">
+                <div class="cube">
+                    <div class="cube__face cube__face--front">front</div>
+                    <div class="cube__face cube__face--back">back</div>
+                    <div class="cube__face cube__face--right">right</div>
+                    <div class="cube__face cube__face--left">left</div>
+                    <div class="cube__face cube__face--top">top</div>
+                    <div class="cube__face cube__face--bottom">bottom</div>
+                </div>
+            </div>
+            <p class="radio-group">
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="front" checked /> front
+                </label>
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="right" /> right
+                </label>
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="back" /> back
+                </label>
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="left" /> left
+                </label>
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="top" /> top
+                </label>
+                <label>
+                    <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
+                </label>
+            </p>
+        </div>
 
 
-
+    </div>
         <script src="js/app.js"></script>
-</body>
+    </body>
 
-</html>
+    </html>

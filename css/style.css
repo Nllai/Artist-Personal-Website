@@ -1,115 +1,79 @@
 body {
     padding: 0;
     margin: 0;
-    background: #222;
-}
-
-.nav-head {
-    top: 50%;
-    bottom: 50%;
-}
-
-.wrapper {
-    perspective: 2000px;
-    perspective-origin: 50% 30vh;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
+    background: #CCC;
     height: 100vh;
 }
+
+.top {
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+}
+
+.bottom {
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    text-align: center;
+}
+
+.outer {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+
+
+
+.scene {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #CCC;
+    perspective: 400px;
+  }
 
 .cube {
-    transform: rotateY(0deg) translateX(0vw) translatez(0vw);
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+width: 200px;
+height: 200px;
+position: relative;
+transform-style: preserve-3d;
+transform: translateZ(-100px);
+transition: transform 1s;
 }
 
-.cube div {
-    font-size: 5em;
-    font-family: 'Fira Sans', sans-serif;
-    color: #fff;
-    text-shadow: 0px 1px 5px rgba(10, 10, 10, 0.85);
-    letter-spacing: 2px;
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(200, 200, 200, 0.6);
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+.cube.show-front  { transform: translateZ(-100px) rotateY(  20deg); }
+.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+.cube__face {
+position: absolute;
+width: 300px;
+height: 300px;
+border: 2px solid black;
+line-height: 300px;
+font-size: 40px;
+font-weight: bold;
+color: white;
+text-align: center;
 }
 
-.nav {
-    background: red;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(225, 225, 225, 0.3);
-    font-size: 3rem;
-    font-family: arial;
-    cursor: pointer;
-    z-index: 999;
-    height: 100vh;
-    width: 90px;
-    &:hover {
-        color: rgba(225, 225, 225, 0.6);
-    }
-}
+.cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
+.cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+.cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+.cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+.cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
 
-.prev {
-    background: linear-gradient(to right, rgba(10, 10, 10, 0.35), rgba(10, 10, 10, 0.01));
-    &:hover {
-        background: linear-gradient(to right, rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.01));
-    }
-}
+.cube__face--front  { transform: rotateY(  0deg) translateZ(150px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(150px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(150px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(150px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(150px); }
 
-.next {
-    right: 0;
-    background: linear-gradient(to left, rgba(10, 10, 10, 0.35), rgba(10, 10, 10, 0.01));
-    &:hover {
-        background: linear-gradient(to left, rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.01));
-    }
-}
-
-.back {
-    transform: translateZ(-100vw) rotateY(180deg);
-    background: url("http://fullhdpictures.com/wp-content/uploads/2015/03/Full-HD-Landscape-Photography.jpg");
-    background-size: cover;
-}
-
-.right {
-    transform: rotateY(-270deg) translateX(100vw);
-    transform-origin: top right;
-    background: url("https://static1.squarespace.com/static/54104693e4b0aa2fd302187e/t/54516482e4b0f21859049e88/1414620299219/?format=1000w");
-    background-size: cover;
-}
-
-.left {
-    transform: rotateY(270deg) translateX(-100vw);
-    transform-origin: center left;
-    background: url("http://newyorkutazas.info/wp-content/uploads/2016/08/mountain-trees-landscape-photography.jpg");
-    background-size: cover;
-}
-
-.front {
-    transform: translateZ(0);
-    background: url("http://harklee.com/wordpress/wp-content/uploads/2015/12/original2.jpg");
-    background-size: cover;
-}
-
-label {
-    font-family: 'Fira Sans', sans-serif;
-    color: #fff;
-    text-shadow: 0px 1px 5px rgba(10, 10, 10, 1);
-    letter-spacing: 2px;
-    position: fixed;
-    z-index: 999;
-    color: rgba(255, 255, 255, 0.8);
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%);
-}
+label { margin-right: 10px; }
