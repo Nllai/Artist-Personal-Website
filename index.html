@@ -11,40 +11,38 @@
 <body>
 
     <!-- ================ section 1 ================= -->
+    <section class="navbar">
 
-    <article>
-        <section class="navbar">
+        <!--Navbar-->
 
-            <!--Navbar-->
+        <nav>
+            <ul class="nav-head">
+                <li><a onclick="jump('home')">Home</a></li>
+                <li><a onclick="jump('content')">Work</a></li>
+                <li><a onclick="jump('contact')">Contact</a></li>
+            </ul>
+        </nav>
 
-            <nav>
-                <ul class="nav-head">
-                    <li><a onclick="jump('home')">Home</a></li>
-                    <li><a onclick="jump('content')">Work</a></li>
-                    <li><a onclick="jump('contact')">Contact</a></li>
-                </ul>
-            </nav>
+    </section>
 
-        </section>
+    <!-- ================ section 2 ================= -->
+    <section class="slideshow" id="home">
 
-        <!-- ================ section 2 ================= -->
-        <section class="slideshow" id="home">
+        <div class="wrapper">
+            <div class="nav prev">&#60;</div>
+            <div class="nav next">&#62;</div>
 
-            <div class="wrapper">
-                <div class="nav prev">&#60;</div>
-                <div class="nav next">&#62;</div>
-
-                <div class="cube">
-                    <div class="front">front</div>
-                    <div class="back">back</div>
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                </div>
-
-                <label><input type="checkbox" checked="true" class="autoplay"/>Autoplay</label>
+            <div class="cube">
+                <div class="front">front</div>
+                <div class="back">back</div>
+                <div class="left">left</div>
+                <div class="right">right</div>
             </div>
 
-        </section>
+            <label><input type="checkbox" checked="true" class="autoplay"/>Autoplay</label>
+        </div>
+
+    </section>
 
 
 
